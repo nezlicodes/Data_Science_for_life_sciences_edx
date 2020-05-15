@@ -18,7 +18,7 @@ control <- filter(femaleMiceWeights,Diet=="chow") %>% select(Bodyweight) %>%  un
 treatment <- filter(femaleMiceWeights,Diet=="hf") %>% select(Bodyweight) %>%  unlist
 mean(control)
 mean(treatment)
-
+obs <- mean(treatment) - mean(control)
 
 url <- "https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/femaleControlsPopulation.csv"
 filename <- "femaleControlsPopulation.csv"
@@ -43,3 +43,13 @@ for (i in 1:n) {
 }
 length(null)
 mean(femaleMiceWeights$Bodyweight)
+
+
+hist(null)
+
+
+sum(null > obs) / n
+# And that is the p-value
+# The p-value is the answer to the question, what
+# is the probability that an outcome from the null distribution
+# is bigger than what we observed when the null hypothesis is true.
