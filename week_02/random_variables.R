@@ -31,3 +31,15 @@ View(population)
 
 control_var <- sample(population, 12)
 mean(control_var)
+
+
+## defining a vector variabe
+n <-10000
+null <- vector('numeric', n)
+for (i in 1:n) {
+  control <- sample( population,12,)
+  treatment <- sample ( population,12)
+  null[i] <- mean(treatment) - mean(control)
+}
+length(null)
+mean(femaleMiceWeights$Bodyweight)
