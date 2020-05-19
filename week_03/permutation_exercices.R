@@ -18,8 +18,11 @@ dat <- c(smokers,nonsmokers)
 shuffle <- sample( dat )
 smokersstar <- shuffle[1:N]
 nonsmokersstar <- shuffle[(N+1):(2*N)]
-return(mean(smokersstar)-mean(nonsmokersstar))
+obs <- median(smokers) - median(nonsmokers)
+return(obs)
+
 }
 
 set.seed(1)
-replicate(1000, permutation())
+null <- replicate(1000, permutation())
+mean(null) 
