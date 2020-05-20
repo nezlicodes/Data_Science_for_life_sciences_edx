@@ -18,6 +18,11 @@ cor(females$age,females$time)
 # After examining the data, what is a more reasonable conclusion?
 
 ## Males plots
-x=males$age
-y=males$time
-plot(,males$time,xlab="Age",y="Time to finish")
+library(rafalib)
+mypar(2,2)
+plot(females$age, females$time)
+plot(males$age, males$time)
+group <- floor(females$age/5) * 5
+boxplot(females$time~group)
+group <- floor(males$age/5) * 5
+boxplot(males$time~group)
