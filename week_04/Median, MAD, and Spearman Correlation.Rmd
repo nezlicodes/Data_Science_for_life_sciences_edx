@@ -1,0 +1,25 @@
+---
+title: "Median, MAD, and Spearman Correlation"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Introduction
+In high-throughput measurements, outliers are very common and the mean, SD and correlation are really  sensitive to them, so we cannot rely simply on these two statistics to make a robost summary of our data.
+
+### The Median
+One summary statistic that isn't as sensitive to outliers is the median. Which is the middle point of our data. It's the point that has half the data points
+below it, half the points above it.
+
+### The MAD: Median Absolute Deviation.
+The MAD is a robust measure of the variability of a univariate sample of quantitative data. 
+$$
+ 1.4826 \mbox{median} \lvert X_i - \mbox{median}(X_i) \rvert
+$$
+
+### Spearman correlation
+Earlier we saw that the correlation is also sensitive to outliers.
+Spearman correlation is a very simple idea.
+Instead of looking at the values, we look at the ranks.
