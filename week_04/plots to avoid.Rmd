@@ -1,0 +1,32 @@
+---
+title: "Plots to avoid -notes-"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## How to make a bad graphic : A quick tutorial
+The aims of good data graphics is to display data accurately and clearly. According to Karl, some rules for displaying data badly are:
+<ul>
+<li> Display as little information as possible.</li>
+<li>Obscure what you do show (with chart junk).</li>
+<li>Use pseudo-3D and color gratuitously.</li>
+<li>Make a pie chart (preferably in color and 3D).</li>
+<li>Use a poorly chosen scale.</li>
+<li>Ignore significant figures.</li>
+
+</ul>
+
+## Plots to avoid
+<ul>
+<li> Pie charts: the human brain is bad at determining areas.</li>
+> "Pie charts are a very bad way of displaying information. The eye is good at judging linear measures and bad at judging relative areas. A bar chart or dot chart is a preferable way of displaying this type of data."
+
+<li>Barplots as data summaries.</li>
+> "While barplots are useful for showing percentages, they are incorrectly used to display data from two groups being compared."
+
+<li> Barplots for paired data</li>
+<li>Gratuitous 3D </li>
+</ul>
